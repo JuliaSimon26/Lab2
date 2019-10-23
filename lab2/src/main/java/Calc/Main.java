@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-       // ArrayList<Integer> answers = new ArrayList<>();
+       ArrayList<Integer> answers = new ArrayList<>();
         Scanner in = new Scanner(System.in);
         Calculator calculator;
         String answer;
@@ -47,12 +47,12 @@ public class Main {
                     "buffer if exists or will throw an exception.\n" +
                     "To break cycle type 'break' instead of operation");
             while (true) {
-            /*    if (result.compareTo("") == 0) {
+               if (result.compareTo("") == 0) {
                     answer = in.nextLine();
                 } else {
                     answer = str[i];
                     i++;
-                }*/
+                }
                 if (answer.equals("break")) {
                     break;
                 } else {
@@ -60,21 +60,21 @@ public class Main {
                     switch (array.length) {
                         case 1: {
                             System.out.println(((Advanced_Calculator) calculator).calculate(0, Integer.parseInt(array[0]), 0, true, true));
-                            //    answers.add(((Advanced_Calculator) calculator).calculate(0, Integer.parseInt(array[0]), 0, true, true));
+                             answers.add(((Advanced_Calculator) calculator).calculate(0, Integer.parseInt(array[0]), 0, true, true));
                             break;
                         }
                         case 2: {
                             Options options = new Options(array[0]);
                             int operation = options.getOperation();
                             System.out.println(((Advanced_Calculator) calculator).calculate(0, Integer.parseInt(array[1]), operation, true, false));
-                            //   answers.add(((Advanced_Calculator) calculator).calculate(0, Integer.parseInt(array[1]), operation, true, false));
+                              answers.add(((Advanced_Calculator) calculator).calculate(0, Integer.parseInt(array[1]), operation, true, false));
                             break;
                         }
                         case 3: {
                             Options options = new Options(array[1]);
                             int operation = options.getOperation();
                             System.out.println(((Advanced_Calculator) calculator).calculate(Integer.parseInt(array[0]), Integer.parseInt(array[2]), operation, false, false));
-                            //  answers.add(((Advanced_Calculator) calculator).calculate(Integer.parseInt(array[0]), Integer.parseInt(array[2]), operation, false, false));
+                             answers.add(((Advanced_Calculator) calculator).calculate(Integer.parseInt(array[0]), Integer.parseInt(array[2]), operation, false, false));
                             break;
                         }
                     }
@@ -89,12 +89,12 @@ public class Main {
             while (true) {
                 if (result.compareTo("") == 0) {
                     answer = in.nextLine();
-                }/* else {
+                } else {
                     //   String [] str  = result.split(",");
                     answer = str[i];
                     //  System.out.print(answer);
                     i++;
-                }*/
+                }
                 if (answer.equals("break")) {
                     break;
                 } else {
@@ -102,13 +102,17 @@ public class Main {
                     Options options = new Options(array[1]);
                     int operation = options.getOperation();
                     System.out.println(calculator.calculate(Integer.parseInt(array[0]), Integer.parseInt(array[2]), operation));
-                    //  answers.add(calculator.calculate(Integer.parseInt(array[0]), Integer.parseInt(array[2]), operation));
+                      answers.add(calculator.calculate(Integer.parseInt(array[0]), Integer.parseInt(array[2]), operation));
                 }
 
             }
         }
-      //  System.out.println("Do you want to write results in file?y/n");
-      //  answer = in.nextLine();
+        System.out.println("Do you want to write results in file?y/n");
+        answer = in.nextLine();
+        if (answer.toLowerCase().equals("y")) {
+            Output output = new Output();
+            output.write(answers);
+        }
 
     }
 }
