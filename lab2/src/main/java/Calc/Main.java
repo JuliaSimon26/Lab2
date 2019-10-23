@@ -55,7 +55,32 @@ public class Main {
                 }
                 if (answer.equals("break")) {
                     break;
-                } else {
+                }
+                if (answer.equals("restoreOp")) {
+                    int operation = ((Advanced_Calculator) calculator).restoreOperationBuffered();
+                    switch (operation) {
+                        case 1: {
+                            System.out.println("+");
+                            break;
+                        }
+                        case 2: {
+                            System.out.println("-");
+                            break;
+                        }
+                        case 3: {
+                            System.out.println("*");
+                            break;
+                        }
+                        case 4: {
+                            System.out.println("/");
+                            break;
+                        }
+                        case 5: {
+                            System.out.println("%");
+                            break;
+                        }
+                    }}
+                else {
                     String[] array = answer.split(" ");
                     switch (array.length) {
                         case 1: {

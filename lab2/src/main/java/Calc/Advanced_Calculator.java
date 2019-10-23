@@ -41,4 +41,7 @@ public class Advanced_Calculator extends Calc.Calculator {
         }
         return buffer;
     }
+    public int restoreOperationBuffered () {
+        return operationBuffered;
+    }
 }
