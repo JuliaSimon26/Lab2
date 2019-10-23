@@ -1,0 +1,3 @@
+[submodule "lab2/src/main/rack"]
+	path = lab2/src/main/rack
+	url = git://github.com/chneukirchen/rack.git
