@@ -56,6 +56,9 @@ public class Main {
                 if (answer.equals("break")) {
                     break;
                 }
+                if (answer.equals("restoreArg")) {
+                    System.out.println(((Advanced_Calculator) calculator).restoreBuffer());
+                }
                 if (answer.equals("restoreOp")) {
                     int operation = ((Advanced_Calculator) calculator).restoreOperationBuffered();
                     switch (operation) {
