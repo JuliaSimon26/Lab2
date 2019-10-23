@@ -27,7 +27,7 @@ public class Main {
             }
         }
 
-    /*    System.out.println("Do you want to read from file? y/n");
+        System.out.println("Do you want to read from file? y/n");
         answer = in.nextLine();
         if (answer.toLowerCase().equals("y")) {
             //System.out.println("String");
@@ -40,7 +40,7 @@ public class Main {
             }
         }
         int i = 1;
-        String[] str = result.split(",");*/
+        String[] str = result.split(",");
         if (calculator instanceof Advanced_Calculator) {
             System.out.println("Enter operation in format:'first number' 'operation' 'second number'\n" +
                     "It's possible to enter without first number or/and operation, then it will use it's " +
