@@ -1,0 +1,6 @@
+[submodule "lab2/src/main/rack"]
+	path = lab2/src/main/rack
+	url = git://github.com/chneukirchen/rack.git
+[submodule "lab2/src/main/generatee"]
+	path = lab2/src/main/generatee
+	url = https://github.com/generate/generate-git

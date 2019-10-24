@@ -11,7 +11,10 @@ public class Options {
             this.operation = 3;
         } else if ("/".equals(operation)) {
             this.operation = 4;
-        } else {
+        } else if ("%".equals(operation)){
+            this.operation = 5;
+        }
+        else {
             this.operation = 0;
         }
     }
