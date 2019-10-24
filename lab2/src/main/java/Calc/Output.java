@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Output {
     public void write(ArrayList list) throws IOException {
-        File file = new File("C:\\Users\\User1\\IdeaProjects\\Main\\src\\main\\java\\Calc\\output.txt");
+        File file = new File("output.txt");
         file.createNewFile();
         FileWriter filewriter = new FileWriter(file);
         for (int i=0; i<list.size();i++) {
