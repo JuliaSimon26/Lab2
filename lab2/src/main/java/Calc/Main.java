@@ -47,7 +47,7 @@ public class Main {
                     "buffer if exists or will throw an exception.\n" +
                     "To break cycle type 'break' instead of operation");
             while (true) {
-               if (result.compareTo("") == 0) {
+                if (result.compareTo("") == 0) {
                     answer = in.nextLine();
                 } else {
                     answer = str[i];
