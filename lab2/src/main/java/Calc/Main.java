@@ -31,7 +31,7 @@ public class Main {
         answer = in.nextLine();
         if (answer.toLowerCase().equals("y")) {
             //System.out.println("String");
-            answer = "C:\\Users\\User1\\IdeaProjects\\Main\\src\\main\\java\\Calc\\input.txt";
+            answer = "C:\\Users\\User1\\IdeaProjects\\Lab2\\lab2\\src\\main\\java\\Calc\\input.txt";
             Input input = new Input();
             result = input.reader(answer);
         } else {
